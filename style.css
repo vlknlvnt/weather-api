@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    background-image: url('img/sunny.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    height: 10em;
+    font-size: 1.2em;
+}
+
+.description, .minmax, .humidity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: white;
+}
+
+.results {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    color: white;
+}
+
+#form {
+    position: relative;
+}
+
+.result-bottom-row {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    align-items: baseline;
+    justify-content: center;
+    font-size: 1.2em;
+}
+
+.temp, .description {
+    width: auto;
+    color: white;
+}
+
+.input-group {
+    justify-content: center;
+    margin: 2.8em 0;
+}
+
+.city {
+    font-size: 3.5em;
+    color: white;
+}
+
+.bottom {
+    width: 100%;
+}
+
+.notification {
+    width: 100%;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    transition:opacity 0.3s;
+}
+
+.notification-inner {
+    width: 23em;    
+    background-color: white;
+    border-radius: 0.3em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.notification-text {
+    margin: 0;
+    padding: 0.3em;
+    color: #343a40;
+}
+
+.ntf-show {
+    animation-name: notification-opacity;    
+    animation-duration: 6s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes notification-opacity {
+    0%      { opacity: 0; }
+    10%     { opacity: 1; }
+    90%     { opacity: 1; }
+    100%    { opacity: 0; }
+  }
+
+
+.time {
+    font-size: 1.2em;
+}
+
+#searchBar {
+    font-size: 1.4em;
+    padding: 0.7em;
+}
+
+input {
+    outline: none;
+    border:none;
+}
+
+input:focus {
+    outline: none;
+    background-color: rgb(231, 231, 231);
+    border:none;
+}
+
+#bosluk {
+    display: none;
+}
+
+
+@media only screen and (max-width: 1200px) {
+    body {
+        background-size: auto;
+    }
+
+    .header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:1em;
+    }
+
+    .wrapper {
+        gap: 1em;
+    }
+  }
